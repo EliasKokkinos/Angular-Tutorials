@@ -1,0 +1,22 @@
+<p-menubar [model]="items">
+  <div class="d-flex justify-content-end align-items-center">
+    <input type="text" pInputText placeholder="Search">
+    <div class="ps-2">
+      <button pButton label="Logout" icon="pi pi-power-off"></button>
+    </div>
+
+  </div>
+</p-menubar>
+
+<div class="row p-3">
+  <div class="col" style="max-width: 220px;">
+    <p-menu [model]="itemsLeft"></p-menu>
+  </div>
+  <div class="col">
+    <p-panel header="Examples">
+      <div class="p-4">
+        <router-outlet></router-outlet>
+      </div>
+    </p-panel>
+  </div>
+</div>
