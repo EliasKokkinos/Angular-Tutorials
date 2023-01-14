@@ -1,0 +1,57 @@
+<p-panel header="">
+    <h3>Binding</h3>
+</p-panel>
+
+<div class="m-4"></div>
+<div class="row">
+
+    <div class="col-6">
+        <!--Start::About-->
+        <p-panel header="Attribute binding">
+            <div>
+                <input type="text" pInputText [(ngModel)]="variableAlpha" />
+                <div class="pt-3">
+                    <div [attr.class]="variableAlpha"
+                        style="background-color: rgb(90, 90, 90); color: black; font-size: 1.5rem;">
+                        Class: {{variableAlpha}}
+                    </div>
+                </div>
+            </div>
+            <br>
+        </p-panel>
+        <!--End::About-->
+
+        <!--Start::Geralt-->
+        <div class="m-4"></div>
+        <p-panel header="Class and style binding | Event Binding">
+            <div>
+                <div>
+                    <button pButton type="button" label="Toggle" (click)="variableBeta = !variableBeta"></button>
+                </div>
+
+                <div class="pt-3">
+                    <div [class.p-3]="variableBeta" style="font-size: 1.5rem;">
+                        Value of Variable controlling '[class.p-3]': {{variableBeta}}
+                    </div>
+                </div>
+            </div>
+            <br>
+        </p-panel>
+        <!--End::Geralt-->
+    </div>
+
+    <div class="col-6">
+        <!--Start::Characters-->
+        <p-panel header="Binding to keyboard events">
+            <input (keydown.shift.t)="onKeydown($event)" />
+        </p-panel>
+        <!--End::Characters-->
+        <div class="m-4"></div>
+        <p-panel header="Binding to a property">
+            <div class="mb-1"><button pButton type="button" [disabled]="variableBeta">Disabled Button</button></div>
+            <div><img alt="item" [src]="imageUrl"></div>
+
+        </p-panel>
+    </div>
+
+</div>

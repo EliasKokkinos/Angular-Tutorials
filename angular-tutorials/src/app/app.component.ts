@@ -33,7 +33,7 @@ export class AppComponent {
       {
         label: 'Property Binding',
         icon: 'pi pi-angle-right',
-        routerLink: '/'
+        routerLink: '/angular-basics/property-binding'
       },
       {
         label: 'Two-way Binding',

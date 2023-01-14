@@ -10,7 +10,8 @@ import {ButtonModule} from 'primeng/button';
 import {MenuModule} from 'primeng/menu';
 import {PanelModule} from 'primeng/panel';
 import { CommonModule, JsonPipe } from '@angular/common';
-
+import {ToggleButtonModule} from 'primeng/togglebutton';
+import {InputSwitchModule} from 'primeng/inputswitch';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,8 @@ import { CommonModule, JsonPipe } from '@angular/common';
     ButtonModule,
     MenuModule,
     PanelModule,
+    ToggleButtonModule,
+    InputSwitchModule,
   ],
   providers: [
     { provide: JsonPipe }
