@@ -23,20 +23,63 @@ export class AppComponent {
       }
     ];
 
-
     this.itemsLeft = [{
       label: 'Basics',
       items: [{
         label: 'Interpolation',
-        icon: 'pi pi-refresh',
+        icon: 'pi pi-angle-right',
         routerLink: '/angular-basics/interpolation'
       },
       {
-        label: 'Delete',
-        icon: 'pi pi-times',
+        label: 'Property Binding',
+        icon: 'pi pi-angle-right',
         routerLink: '/'
-      }
-      ]
+      },
+      {
+        label: 'Two-way Binding',
+        icon: 'pi pi-angle-right',
+        routerLink: '/angular-basics/interpolation'
+      },
+      {
+        label: 'Attribute Directives',
+        icon: 'pi pi-angle-right',
+        routerLink: '/angular-basics/interpolation'
+      },
+      {
+        label: 'Structural Directives',
+        icon: 'pi pi-angle-right',
+        routerLink: '/angular-basics/interpolation'
+      },
+      {
+        label: 'Input, Output',
+        icon: 'pi pi-angle-right',
+        routerLink: '/angular-basics/interpolation'
+      },
+      {
+        label: 'Services',
+        icon: 'pi pi-angle-right',
+        routerLink: '/angular-basics/interpolation'
+      },
+      {
+        label: 'Dependency Injection',
+        icon: 'pi pi-angle-right',
+        routerLink: '/angular-basics/interpolation'
+      },
+      {
+        label: 'Reactive Forms',
+        icon: 'pi pi-angle-right',
+        routerLink: '/angular-basics/interpolation'
+      },
+      {
+        label: 'Pipes',
+        icon: 'pi pi-angle-right',
+        routerLink: '/angular-basics/interpolation'
+      },
+      {
+        label: 'HTTP Requests',
+        routerLink: '/angular-basics/interpolation'
+      },
+    ]
     },
     {
       label: 'Intermediate',

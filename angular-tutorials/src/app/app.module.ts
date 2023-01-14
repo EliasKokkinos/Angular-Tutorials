@@ -9,6 +9,7 @@ import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
 import {MenuModule} from 'primeng/menu';
 import {PanelModule} from 'primeng/panel';
+import { CommonModule, JsonPipe } from '@angular/common';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import {PanelModule} from 'primeng/panel';
     AppComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
@@ -25,7 +27,9 @@ import {PanelModule} from 'primeng/panel';
     MenuModule,
     PanelModule,
   ],
-  providers: [],
+  providers: [
+    { provide: JsonPipe }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

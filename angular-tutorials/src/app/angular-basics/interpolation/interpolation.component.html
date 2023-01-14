@@ -1,3 +1,46 @@
-<p>
-  interpolation works!
-</p>
+<!--Start::About-->
+<div>
+  <h4>About</h4>
+  <p>
+    {{theWitcher}}
+  </p>
+</div>
+<!--End::About-->
+
+<!--Start::Characters-->
+<div>
+  <h4>Characters</h4>
+  <p>
+    {{characters | json}}
+  </p>
+  <ul>
+    <li *ngFor="let character of characters">{{character}}</li>
+  </ul>
+</div>
+<!--End::Characters-->
+
+<!--Start::Geralt-->
+<div>
+  <h4>Geralt</h4>
+  <p>
+    {{infoGeralt | json}}
+  </p>
+  <!--Start::Table-->
+  <table style="width: 25rem">
+    <tr>
+      <td>Name</td>
+      <td>{{infoGeralt.name}}</td>
+    </tr>
+    <tr>
+      <td>Occupation</td>
+      <td>{{infoGeralt.occupation}}</td>
+    </tr>
+    <tr>
+      <td>Age</td>
+      <td>{{infoGeralt.age != null ? infoGeralt.age: 'Unknown' }}</td>
+    </tr>
+    <tr>
+  </table>
+  <!--End::Table-->
+</div>
+<!--End::Geralt-->
