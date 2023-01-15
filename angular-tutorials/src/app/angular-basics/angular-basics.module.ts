@@ -9,6 +9,10 @@ import { PropertyBindingComponent } from './property-binding/property-binding.co
 import {InputTextModule} from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
+import { ImageSwitcherComponent } from './components/image-switcher/image-switcher.component';
+import {TabViewModule} from 'primeng/tabview';
+import {DropdownModule} from 'primeng/dropdown';
+import { TwoWayBindComponent } from './components/two-way-bind/two-way-bind.component';
 
 
 @NgModule({
@@ -16,6 +20,8 @@ import { ButtonModule } from 'primeng/button';
     AngularBasicsComponent,
     InterpolationComponent,
     PropertyBindingComponent,
+    ImageSwitcherComponent,
+    TwoWayBindComponent,
   ],
   imports: [
     FormsModule,
@@ -23,6 +29,8 @@ import { ButtonModule } from 'primeng/button';
     CommonModule,
     AngularBasicsRoutingModule,
     PanelModule,
+    TabViewModule,
+    DropdownModule,
     InputTextModule,
   ],
   providers: [
