@@ -13,6 +13,7 @@ import { ImageSwitcherComponent } from './components/image-switcher/image-switch
 import {TabViewModule} from 'primeng/tabview';
 import {DropdownModule} from 'primeng/dropdown';
 import { TwoWayBindComponent } from './components/two-way-bind/two-way-bind.component';
+import { BasicDirectivesComponent } from './basic-directives/basic-directives.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { TwoWayBindComponent } from './components/two-way-bind/two-way-bind.comp
     PropertyBindingComponent,
     ImageSwitcherComponent,
     TwoWayBindComponent,
+    BasicDirectivesComponent,
   ],
   imports: [
     FormsModule,

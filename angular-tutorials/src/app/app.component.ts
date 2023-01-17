@@ -36,19 +36,9 @@ export class AppComponent {
         routerLink: '/angular-basics/property-binding'
       },
       {
-        label: 'Two-way Binding',
+        label: 'Basic Directives',
         icon: 'pi pi-angle-right',
-        routerLink: '/angular-basics/interpolation'
-      },
-      {
-        label: 'Attribute Directives',
-        icon: 'pi pi-angle-right',
-        routerLink: '/angular-basics/interpolation'
-      },
-      {
-        label: 'Structural Directives',
-        icon: 'pi pi-angle-right',
-        routerLink: '/angular-basics/interpolation'
+        routerLink: '/angular-basics/basic-directives'
       },
       {
         label: 'Input, Output',

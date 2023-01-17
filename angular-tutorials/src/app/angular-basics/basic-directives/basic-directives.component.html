@@ -1,0 +1,40 @@
+<p-tabView>
+    <p-tabPanel header="Attribute Directives">
+        <div class="row">
+            <div class="col-6">
+                <div class="row">
+                    <div class="col pb-3">
+                        <p-panel header="Atr. Directive : ngClass">
+                            <div><label for="classes-dropdown">Selected Class</label></div>
+                            <p-dropdown inputId="classes-dropdown" [options]="classesDropdown"
+                                [(ngModel)]="selectedClass"></p-dropdown>
+                        </p-panel>
+                    </div>
+                    <div class="col pb-3">
+                        <p-panel header="Atr. Directive : ngStyle">
+                            <div><label for="classes-dropdown">Selected <Style></Style></label></div>
+                            <p-dropdown inputId="classes-dropdown" [options]="stylesDropdown"
+                                [(ngModel)]="selectedStyle"></p-dropdown>
+                        </p-panel>
+                    </div>
+                    <div class="col pb-3">
+                        <p-panel header="Atr. Directive : ngModel">
+                            <div><label for="classes-dropdown">NgModel</label></div>
+                            <textarea rows="4" cols="40" pInputTextarea [(ngModel)]="sampleModel"></textarea>
+                        </p-panel>
+                    </div>
+                </div>
+                <p-panel header="Affected Paragraph">
+                    <p [ngClass]="selectedClass" [ngStyle]="{'color': selectedStyle}" class="p-2">
+                        {{sampleModel}}
+                    </p>
+                </p-panel>
+            </div>
+        </div>
+
+
+    </p-tabPanel>
+    <p-tabPanel header="Structural Directives">
+
+    </p-tabPanel>
+</p-tabView>
