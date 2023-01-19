@@ -41,9 +41,9 @@ export class AppComponent {
         routerLink: '/angular-basics/basic-directives'
       },
       {
-        label: 'Input, Output',
+        label: 'Events, Input, Output',
         icon: 'pi pi-angle-right',
-        routerLink: '/angular-basics/interpolation'
+        routerLink: '/angular-basics/input-output'
       },
       {
         label: 'Services',

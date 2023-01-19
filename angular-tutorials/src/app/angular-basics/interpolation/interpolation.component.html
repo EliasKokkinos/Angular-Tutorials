@@ -1,58 +1,72 @@
-<p-panel header="">
-  <h3>Interpolation</h3>
-</p-panel>
+<p-tabView>
+  <p-tabPanel header="Interpolation">
+    <h4>Angular Basics</h4>
+    <div>
+      <div>
+        <a href="https://www.typescriptlang.org/docs/handbook/intro.html" target="_blank">The TypeScript Handbook</a>
+      </div>
+      <div>
+        <a href="https://codecraft.tv/courses/angular/es6-typescript/types/" target="_blank">Angular Types and
+          Functions</a>
+      </div>
+    </div>
+  </p-tabPanel>
+  <p-tabPanel header="Interpolation">
 
-<div class="m-4"></div>
-<div class="row">
-
-  <div class="col-6">
-    <!--Start::About-->
-    <p-panel header="About">
-      <p>
-        {{theWitcher}}
-      </p>
-    </p-panel>
-    <!--End::About-->
-
-    <!--Start::Geralt-->
     <div class="m-4"></div>
-    <p-panel header="Geralt">
-      <h4>Geralt</h4>
-      <p>
-        {{infoGeralt | json}}
-      </p>
-      <!--Start::Table-->
-      <table style="width: 25rem">
-        <tr>
-          <td>Name</td>
-          <td>{{infoGeralt.name}}</td>
-        </tr>
-        <tr>
-          <td>Occupation</td>
-          <td>{{infoGeralt.occupation}}</td>
-        </tr>
-        <tr>
-          <td>Age</td>
-          <td>{{infoGeralt.age != null ? infoGeralt.age: 'Unknown' }}</td>
-        </tr>
-        <tr>
-      </table>
-      <!--End::Table-->
-    </p-panel>
-    <!--End::Geralt-->
-  </div>
+    <div class="row">
 
-  <div class="col-6">
-    <!--Start::Characters-->
-    <p-panel header="Characters">
-      <p>
-        {{characters | json}}
-      </p>
-      <ul>
-        <li *ngFor="let character of characters">{{character}}</li>
-      </ul>
-    </p-panel>
-    <!--End::Characters-->
-  </div>
+      <div class="col-6">
+        <!--Start::About-->
+        <p-panel header="About">
+          <p>
+            {{theWitcher}} <!--Focus::001-->
+          </p>
+        </p-panel>
+        <!--End::About-->
 
-</div>
+        <!--Start::Geralt-->
+        <div class="m-4"></div>
+        <p-panel header="Geralt">
+          <h4>Geralt</h4>
+          <p>
+            {{infoGeralt | json}} <!--Focus::002a-->
+          </p>
+          <!--Start::Table-->
+          <table style="width: 25rem">
+            <tr>
+              <td>Name</td>
+              <td>{{infoGeralt.name}}</td> <!--Focus::002b-->
+            </tr>
+            <tr>
+              <td>Occupation</td>
+              <td>{{infoGeralt.occupation}}</td> <!--Focus::002c-->
+            </tr>
+            <tr>
+              <td>Age</td>
+              <td>{{infoGeralt.age != null ? infoGeralt.age: 'Unknown' }}</td> <!--Focus::002d-->
+            </tr>
+            <tr>
+          </table>
+          <!--End::Table-->
+        </p-panel>
+        <!--End::Geralt-->
+      </div>
+
+      <div class="col-6">
+        <!--Start::Characters-->
+        <p-panel header="Characters">
+          <p>
+            {{characters | json}} <!--Focus::003-->
+          </p>
+          <ul>
+            <li *ngFor="let character of characters">{{character}}</li> <!--Focus::003a-->
+          </ul>
+        </p-panel>
+        <!--End::Characters-->
+      </div>
+
+    </div>
+
+  </p-tabPanel>
+</p-tabView>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Character } from '../../core/models/character';
 
 @Component({
   templateUrl: './property-binding.component.html',
@@ -23,7 +24,3 @@ export class PropertyBindingComponent {
   
 }
 
-interface Character {
-  name: string,
-  value: string
-}

@@ -1,4 +1,4 @@
-<p-tabView>
+<p-tabView [(activeIndex)]="index">
     <p-tabPanel header="Attribute Directives">
         <div class="row">
             <div class="col-6">
@@ -11,20 +11,20 @@
                         </p-panel>
                     </div>
                     <div class="col pb-3">
-                        <p-panel header="Atr. Directive : ngStyle">
+                        <p-panel header="Atr. Directive : ngStyle"> <!--Focus::001-->
                             <div><label for="classes-dropdown">Selected <Style></Style></label></div>
                             <p-dropdown inputId="classes-dropdown" [options]="stylesDropdown"
                                 [(ngModel)]="selectedStyle"></p-dropdown>
                         </p-panel>
                     </div>
                     <div class="col pb-3">
-                        <p-panel header="Atr. Directive : ngModel">
+                        <p-panel header="Atr. Directive : ngModel"> <!--Focus::002-->
                             <div><label for="classes-dropdown">NgModel</label></div>
                             <textarea rows="4" cols="40" pInputTextarea [(ngModel)]="sampleModel"></textarea>
                         </p-panel>
                     </div>
                 </div>
-                <p-panel header="Affected Paragraph">
+                <p-panel header="Affected Paragraph"> <!--Focus::003-->
                     <p [ngClass]="selectedClass" [ngStyle]="{'color': selectedStyle}" class="p-2">
                         {{sampleModel}}
                     </p>
@@ -36,5 +36,57 @@
     </p-tabPanel>
     <p-tabPanel header="Structural Directives">
 
+        <div class="row">
+            <div class="col">
+                <p-panel header="Str. Directive : NgIf">
+                    <p-button label="Toggle" (click)="toggleNgIf = !toggleNgIf"></p-button>
+                    <div class="m-2"></div>
+                    <div *ngIf="toggleNgIf"> <!--Focus::004-->
+                        <img src="assets/img/yen03.jpg" alt="" srcset="" class="yen-img">
+                    </div>
+                    <div *ngIf="!toggleNgIf">
+                        <img src="assets/img/ciri03.jpg" alt="" srcset="" class="yen-img">
+                    </div>
+                </p-panel>
+            </div>
+            <div class="col">
+                <p-panel header="Str. Directive : NgIf with Else">
+                    <p-button label="Toggle" (click)="toggleNgIfElse = !toggleNgIfElse"></p-button>
+                    <div class="m-2"></div>
+                    <div *ngIf="toggleNgIfElse; else ciri"> <!--Focus::005-->
+                        <img src="assets/img/yen04.jpg" alt="" srcset="" class="yen-img">
+                    </div>
+                    <ng-template #ciri>
+                        <img src="assets/img/ciri05.jpg" alt="" srcset="" class="yen-img">
+                    </ng-template>
+
+                    <div class="m-2"></div>
+                    <p>
+                        There is also a ternary version I am not covering.
+                        More <a href="https://ultimatecourses.com/blog/angular-ngif-else-then" target="_blank">here</a>
+                    </p>
+                </p-panel>
+            </div>
+            <div class="col">
+
+                <p-panel header="Str. Directive : NgFor">
+                    <p *ngFor="let character of characters"><!--Focus::005-->
+                        {{character.name}}
+                    </p>
+
+                </p-panel>
+            </div>
+            <div class="col">
+
+                <p-panel header="Str. Directive : NgSwitch">
+                    <div *ngFor="let character of characters" [ngSwitch]="character.name"><!--Focus::005-->
+                        <img src="assets/img/yen00.jpg" alt="" srcset="" class="yen-img" *ngSwitchCase="'Yennefer'">
+
+                        <img src="assets/img/ciri02.jpg" alt="" srcset="" class="yen-img" *ngSwitchCase="'Ciri'">
+                    </div>
+                </p-panel>
+
+            </div>
+        </div>
     </p-tabPanel>
 </p-tabView>

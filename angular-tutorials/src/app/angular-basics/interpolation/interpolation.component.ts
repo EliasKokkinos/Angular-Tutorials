@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-interpolation',
   templateUrl: './interpolation.component.html',
-  styleUrls: ['./interpolation.component.css']
+  styleUrls: ['./interpolation.component.scss']
 })
 export class InterpolationComponent implements OnInit {
   public theWitcher: string = 'The Witcher is a series of fantasy action role-playing games developed by CD Projekt Red and published by CD Projekt. It is based on the book series of the same name by Polish writer Andrzej Sapkowski, acting as non-canonical sequels to the story of the books.'
