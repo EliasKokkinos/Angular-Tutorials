@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Character } from '../../core/models/character';
 
 @Component({
+  selector: 'app-property-binding',
   templateUrl: './property-binding.component.html',
   styleUrls: ['./property-binding.component.scss']
 })

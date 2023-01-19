@@ -1,0 +1,38 @@
+<p-tabView>
+    <p-tabPanel header="Events">
+        <div>
+            Guide Devs through live examples
+        </div>
+    </p-tabPanel>
+    <p-tabPanel header="Input/Output">
+        <div class="row">
+            <div class="col">
+
+                <p-panel header="Input"> <!--Focus::001-->
+                    <input type="text" pInputText placeholder="Image Name" [(ngModel)]="imageName">
+                    <div class="m-2"></div>
+                    <app-input-example [ImageInput]="imageName"></app-input-example>
+                </p-panel>
+            </div>
+            <div class="col" style="max-width: fit-content;">
+                <p-panel header="Event from Child Component"> <!--Focus::002-->
+                    <app-output-example (eventakos)="showNewEvent($event)"></app-output-example>
+                </p-panel>
+            </div>
+            <div class="col" style="max-width: fit-content;">
+                <p-panel header="More Advanced Examples"> <!--Focus::003-->
+                    <p-button label="Show/Hide Examples" [styleClass]="'f-width'" (click)="showExamples()"></p-button>
+                </p-panel>
+            </div>
+            <div class="col">
+            </div>
+            <div class="col-12 mt-3">
+                <p-panel header="Examples" [hidden]="!showAdvancedExamples"> <!--Focus::004-->
+                    <app-property-binding></app-property-binding>
+                </p-panel>
+            </div>
+        </div>
+    </p-tabPanel>
+</p-tabView>
+
+<p-toast></p-toast>

@@ -1,3 +1,4 @@
+import { InputOutputComponent } from './input-output/input-output.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -10,6 +11,7 @@ const routes: Routes = [
   { path: 'interpolation', component: InterpolationComponent },
   { path: 'property-binding', component: PropertyBindingComponent },
   { path: 'basic-directives', component: BasicDirectivesComponent },
+  { path: 'input-output', component: InputOutputComponent },
 ];
 
 @NgModule({

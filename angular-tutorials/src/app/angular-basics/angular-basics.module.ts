@@ -14,6 +14,10 @@ import {TabViewModule} from 'primeng/tabview';
 import {DropdownModule} from 'primeng/dropdown';
 import { TwoWayBindComponent } from './components/two-way-bind/two-way-bind.component';
 import { BasicDirectivesComponent } from './basic-directives/basic-directives.component';
+import { InputOutputComponent } from './input-output/input-output.component';
+import { InputExampleComponent } from './components/input-example/input-example.component';
+import { OutputExampleComponent } from './components/output-example/output-example.component';
+import {ToastModule} from 'primeng/toast';
 
 
 @NgModule({
@@ -24,6 +28,9 @@ import { BasicDirectivesComponent } from './basic-directives/basic-directives.co
     ImageSwitcherComponent,
     TwoWayBindComponent,
     BasicDirectivesComponent,
+    InputOutputComponent,
+    InputExampleComponent,
+    OutputExampleComponent,
   ],
   imports: [
     FormsModule,
@@ -33,6 +40,7 @@ import { BasicDirectivesComponent } from './basic-directives/basic-directives.co
     PanelModule,
     TabViewModule,
     DropdownModule,
+    ToastModule,
     InputTextModule,
   ],
   providers: [
