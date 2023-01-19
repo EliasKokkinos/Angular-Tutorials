@@ -18,6 +18,7 @@ import { InputOutputComponent } from './input-output/input-output.component';
 import { InputExampleComponent } from './components/input-example/input-example.component';
 import { OutputExampleComponent } from './components/output-example/output-example.component';
 import {ToastModule} from 'primeng/toast';
+import { ServicesPageComponent } from './services-page/services-page.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import {ToastModule} from 'primeng/toast';
     InputOutputComponent,
     InputExampleComponent,
     OutputExampleComponent,
+    ServicesPageComponent,
   ],
   imports: [
     FormsModule,

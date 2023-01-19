@@ -48,7 +48,7 @@ export class AppComponent {
       {
         label: 'Services',
         icon: 'pi pi-angle-right',
-        routerLink: '/angular-basics/interpolation'
+        routerLink: '/angular-basics/services'
       },
       {
         label: 'Dependency Injection',
